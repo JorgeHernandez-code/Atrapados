@@ -73,6 +73,9 @@ Si un cambio tiene un error, Vercel no lo publica y deja funcionando la versión
 
 3. Repite con tu propio correo si también quieres acceso.
 4. Prueba: abre `https://TU-DIRECCION/admin` e inicia sesión.
+5. Para que Freddy pueda cambiar fechas y textos: Freddy crea una cuenta gratuita en
+   <https://github.com>. Luego, en el repositorio, ve a **Settings → Collaborators → Add people**
+   y escribe su usuario. Freddy debe aceptar la invitación que le llega por correo.
 
 ## Paso 5 — Completar los datos legales (obligatorio antes del estreno)
 
