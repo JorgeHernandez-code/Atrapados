@@ -1,0 +1,12 @@
+node_modules
+dist
+.env
+.env.local
+.env.*.local
+*.log
+.DS_Store
+supabase/.temp
+supabase/.branches
+
+# Documentos originales del equipo (contienen datos de los intérpretes). No publicar.
+docs/fuentes/
