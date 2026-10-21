@@ -70,7 +70,7 @@ export const DATA_CONTROLLER = {
    */
   processors: [
     { name: 'Supabase Inc.', purpose: 'Base de datos y autenticación del panel administrativo', location: 'Según la región elegida al crear el proyecto (puede estar fuera de Colombia)' },
-    { name: 'Proveedor de hosting de la página (p. ej. Vercel o Netlify)', purpose: 'Publicación del sitio web; registra datos técnicos de conexión', location: 'Estados Unidos u otros países' },
+    { name: 'Netlify, Inc. (hosting de la página)', purpose: 'Publicación del sitio web; registra datos técnicos de conexión', location: 'Estados Unidos u otros países' },
     { name: 'WhatsApp (Meta Platforms)', purpose: 'Solo si el equipo envía la información por WhatsApp', location: 'Estados Unidos u otros países' },
   ],
 };

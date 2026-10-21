@@ -5,7 +5,7 @@ Tiempo aproximado: 30–40 minutos. Necesitas: la cuenta de GitHub donde está e
 
 Al terminar tendrás:
 
-- La página publicada en internet (gratis), por ejemplo `https://atrapados.vercel.app`.
+- La página publicada en internet (gratis), por ejemplo `https://atrapados.netlify.app`.
 - La base de datos donde quedan los contactos (gratis).
 - Una cuenta para que Freddy entre al panel `/admin`.
 
@@ -37,11 +37,15 @@ Al terminar tendrás:
 
 Así solo existen las cuentas que tú crees.
 
-## Paso 3 — Publicar la página (Vercel)
+## Paso 3 — Publicar la página (Netlify)
 
-1. Entra en <https://vercel.com> → **Sign up** → **Continue with GitHub**.
-2. **Add New… → Project** → busca `Atrapados` → **Import**.
-3. Abre **Environment Variables** y agrega estas tres (nombre exacto a la izquierda, valor a la derecha):
+1. Entra en <https://www.netlify.com> → **Sign up** → **GitHub** (o entra con tu cuenta, si ya tienes).
+2. **Add new project** (o *Add new site*) → **Import an existing project** → **GitHub**.
+   Autoriza a Netlify y elige el repositorio `Atrapados`.
+3. Netlify lee la configuración del proyecto. No cambies *Build command* (`npm run build`) ni
+   *Publish directory* (`dist`).
+4. Busca **Environment variables** (o *Add environment variables*) y agrega estas tres
+   (nombre exacto a la izquierda, valor a la derecha):
 
    | Name | Value |
    |---|---|
@@ -49,16 +53,22 @@ Así solo existen las cuentas que tú crees.
    | `VITE_SUPABASE_ANON_KEY` | la clave anon/publishable del paso 1 |
    | `VITE_ANALYTICS_ENABLED` | `true` |
 
-4. Pulsa **Deploy** y espera 1–2 minutos. Aparecerá la dirección de la página (por ejemplo
-   `https://atrapados-xxxx.vercel.app`). Ábrela y comprueba que se ve el test.
-5. Opcional: en **Settings → Domains** puedes cambiarla por una más corta, como `atrapados.vercel.app`.
-6. Agrega una cuarta variable con la dirección definitiva y vuelve a publicar:
-   - **Settings → Environment Variables** → `VITE_PUBLIC_SITE_URL` = `https://atrapados.vercel.app`
-     (tu dirección, sin `/` al final).
-   - **Deployments** → en el último, menú **⋯** → **Redeploy**.
+   Si no ves esa opción antes de publicar, publica igual y agrégalas después en
+   **Project configuration → Environment variables**. Luego vuelve a publicar (punto 7).
+5. Pulsa **Deploy** y espera 1–2 minutos. Aparecerá una dirección con un nombre al azar (por ejemplo
+   `https://jolly-cat-123abc.netlify.app`). Ábrela y comprueba que se ve el test.
+6. Ponle un nombre fácil: **Project configuration → General → Project details → Change project name**
+   → escribe `atrapados` (si ya existe, prueba `atrapados-sibate` u otro). La dirección quedará como
+   `https://atrapados.netlify.app`.
+7. Agrega una cuarta variable con esa dirección y vuelve a publicar:
+   - **Project configuration → Environment variables** → `VITE_PUBLIC_SITE_URL` =
+     `https://atrapados.netlify.app` (tu dirección, sin `/` al final).
+   - **Deploys** → **Trigger deploy** → **Deploy project** (o *Clear cache and deploy site*).
 
 Desde ahora, **cada cambio que se guarde en GitHub se publica solo** en 1–2 minutos.
-Si un cambio tiene un error, Vercel no lo publica y deja funcionando la versión anterior.
+Si un cambio tiene un error, Netlify no lo publica y deja funcionando la versión anterior.
+En la pestaña **Deploys** se ve cada publicación: verde = publicada, rojo = falló (la página sigue
+con la versión anterior).
 
 ## Paso 4 — Crear la cuenta de Freddy para el panel
 

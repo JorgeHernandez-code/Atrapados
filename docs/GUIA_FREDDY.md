@@ -13,7 +13,7 @@ No necesitas saber programar. Lo único que harás es **entrar al panel** y, de 
 
 | Qué | Dónde |
 |---|---|
-| Dirección de la página | Te la da Jorge (por ejemplo `https://atrapados.vercel.app`) |
+| Dirección de la página | Te la da Jorge (por ejemplo `https://atrapados.netlify.app`) |
 | Panel de contactos | La misma dirección terminada en **`/admin`** |
 | Tu correo y contraseña del panel | Te los da Jorge |
 | Cuenta de GitHub (solo para cambiar textos) | Jorge te da acceso al proyecto |

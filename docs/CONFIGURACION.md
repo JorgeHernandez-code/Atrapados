@@ -126,10 +126,12 @@ npm run build                 # versión de producción en dist/
 
 La app es estática (SPA). Cualquier hosting sirve si redirige todas las rutas a `index.html`.
 
-**Vercel**: importa el repositorio → Framework *Vite* → variables de entorno → *Deploy*.
-`vercel.json` ya incluye la redirección y cabeceras de seguridad.
+**Netlify** (el elegido): importa el repositorio desde GitHub, agrega las variables de entorno y
+publica. `netlify.toml` ya define el comando de compilación, la carpeta `dist`, la versión de Node,
+la redirección de rutas y las cabeceras de seguridad. Paso a paso: docs/PUESTA_EN_MARCHA.md §3.
 
-**Netlify**: build `npm run build`, carpeta `dist`. `public/_redirects` ya incluye la redirección.
+Otro hosting estático (Vercel, Cloudflare Pages…) también sirve: compilación `npm run build`,
+carpeta `dist` y redirigir todas las rutas a `/index.html`.
 
 Después de publicar:
 
